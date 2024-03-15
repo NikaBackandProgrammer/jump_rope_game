@@ -13,25 +13,25 @@ pygame.display.set_caption("Pygame -  game from Nika")
 #bg_sound = pygame.mixer.Sound('sounds/bg.mp3')
 #bg_sound.play()
 
-label1 = pygame.font.Font('fonts/RobotoMono-Italic.ttf', 40)
-label2 = pygame.font.Font('fonts/RobotoMono-Italic.ttf', 30)
+label1 = pygame.font.Font('../fonts/RobotoMono-Italic.ttf', 40)
+label2 = pygame.font.Font('../fonts/RobotoMono-Italic.ttf', 30)
 lose_label = label1.render('You lose...', False, (193, 196, 199))
 restart_label = label2.render('Restart game?', False, (115, 132, 148))
 restart_label_rect = restart_label.get_rect(topleft=(180, 200))
 
 #player
-bg = pygame.image.load('image/background.png').convert()
+bg = pygame.image.load('../image/background.png').convert()
 walk_left = [
-    pygame.image.load('image/player_left/player_left1.png').convert_alpha(),
-    pygame.image.load('image/player_left/player_left2.png').convert_alpha(),
-    pygame.image.load('image/player_left/player_left3.png').convert_alpha(),
-    pygame.image.load('image/player_left/player_left4.png').convert_alpha()
+    pygame.image.load('../image/player_left/player_left1.png').convert_alpha(),
+    pygame.image.load('../image/player_left/player_left2.png').convert_alpha(),
+    pygame.image.load('../image/player_left/player_left3.png').convert_alpha(),
+    pygame.image.load('../image/player_left/player_left4.png').convert_alpha()
 ]
 walk_right = [
-    pygame.image.load('image/player_right/player_right1.png').convert_alpha(),
-    pygame.image.load('image/player_right/player_right2.png').convert_alpha(),
-    pygame.image.load('image/player_right/player_right3.png').convert_alpha(),
-    pygame.image.load('image/player_right/player_right4.png').convert_alpha()
+    pygame.image.load('../image/player_right/player_right1.png').convert_alpha(),
+    pygame.image.load('../image/player_right/player_right2.png').convert_alpha(),
+    pygame.image.load('../image/player_right/player_right3.png').convert_alpha(),
+    pygame.image.load('../image/player_right/player_right4.png').convert_alpha()
 ]
 player_anim_count = 0
 bg_x = 0
@@ -43,14 +43,14 @@ is_jump = False
 jump_count = 8
 
 #enemy
-ghost = pygame.image.load('image/ghost.png').convert_alpha()
+ghost = pygame.image.load('../image/ghost.png').convert_alpha()
 ghost_list_in_game = []
 ghost_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(ghost_timer, 2500)
 
 #bullet
 bullets_left = 5
-bullet = pygame.image.load('image/pill.png').convert_alpha()
+bullet = pygame.image.load('../image/pill.png').convert_alpha()
 bullets = []
 
 gameplay = True
